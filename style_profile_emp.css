@@ -1,0 +1,89 @@
+body{
+	margin: 0
+}
+h1{
+    text-align: center;
+    background-color:#68bfdc;
+    color: white;
+    margin: 0;
+    padding: 12px
+}
+.row{
+	display: flex;
+	flex-direction: row;
+}
+.col_one{
+	padding-top: 50px;
+    background-color:#4faaca;
+    width: 15%;
+    height: 546px;
+    padding-left: 20px
+
+}
+ul{
+	list-style: none;
+	margin: 0; padding: 0
+}
+ul li{
+    margin-bottom: 20px;
+    color: #544f4f	
+}
+.col{
+	background:#9e9e9e1c;
+    width:100%;
+    padding-left:50px;
+    padding-top: 30px
+}
+.col h4{
+	color: green;
+
+}
+form{
+	background-color:white;
+	padding:20px;
+	margin-right: 55px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 400px
+}
+label{
+	color:#a09999
+}
+div .fullnamee{
+	display: flex; 
+	flex-direction: row;	
+}
+div .fullnamee input{margin: 0}
+.col1{
+	width: 35%;
+	margin-left: 40px
+}
+.col1 input{
+	width: 94%;	
+}
+.username{
+		margin-top: 20px
+}
+input, select{
+	margin-bottom: 25px;
+	border: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    padding-top: 5px
+}
+.col2{width: 23%; margin-left: 50px}
+.col2 select:first-of-type{
+	margin-top: 20px
+}
+.col2 select:first-of-type option{
+	padding-bottom: 20px
+}
+.col2 select,.col2 input{
+	width: 92%;	
+}
+.col2 select:last-of-type{
+	margin-top: 41px
+}
+.col3{margin-left: 20px}
+.col3 input{width: 92%; margin-top: 0}
+.col3 input:first-of-type{margin-top: 39px}
