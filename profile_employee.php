@@ -6,9 +6,9 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>LogIn</title>
+    <title>Profile</title>
     <link rel="stylesheet" type="text/css" href="style_profile_emp.css">
-   <!-- <link rel="stylesheet" type="text/css" href="font-awesome.min.css">-->
+   	<link rel="stylesheet" type="text/css" href="fontawesome.min.css">
 </head>
 <body>
 	<div class="content">
@@ -16,12 +16,12 @@
 	<div class="row">
 		<div class="col_one">
 			<img src="img1.jpeg" width="50%" height="10%" alt="image">
-			<h4><?php echo $_SESSION['user'];?></h4>
+			<h4><?php echo $_SESSION['username'];?></h4>
 			<ul>
-				<li><i class="fa fa-user"></i>My Profiles</li>
-				<li><i class="fa fa-sun"></i>Change Password</li>
-				<li><i class="fa fa-bars"></i>Leaves</li>
-				<li><i class="fa fa-file-import"></i>Layout</li>
+				<li><i class="fas fa-user"></i></i>My Profiles</li>
+				<li><i class="far fa-sun"></i>Change Password</li>
+				<li><i class="fas fa-bars"></i>Leaves</li>
+				<li><i class="fas fa-file-import"></i>Layout</li>
 			</ul>
 		</div>
 		<div class="col">
@@ -30,7 +30,7 @@
 				<form method="post">
 					<div class="col1">	
 						<label>Employee username</label><br>
-						<input class="username" disabled type="text" name="username" value="<?php echo $_SESSION['user'];?>"><br> 
+						<input class="username" disabled type="text" name="username" value="<?php echo $_SESSION['username'];?>"><br> 
 						<div class="fullnamee">
 							<div>
 								<label>First name</label><br>
