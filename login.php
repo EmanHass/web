@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,31 +59,49 @@
 		<div class="log_emp">
 			<h4>EMPLOYEE LOGIN</h4>
 			<form method="post" action="login.php">
-				<input required class="log" type="text" name="name" placeholder="Enter Employee UserName"><br>
-				<input required class="log" type="password" name="pass" placeholder="Enter Password"><br>
-				<input class="check" type="checkbox" name="remmeberLogin"><label>remmemer Login?</label><br>
+				<input required class="log" type="text" id="name" name="name" placeholder="Enter Employee UserName"><br>
+				<input required class="log" type="password" id="pass" name="pass" placeholder="Enter Password"><br>
+				<input class="check" type="checkbox" name="remmeber"><label>remmemer Login?</label><br>
 				<input class="submit" type="submit" name="sub" value="LOGIN">
 
 			</form>
 		</div>			
 	</div>
 </body>
-</html><?php
-	session_start();
+</html>
+<?php
 	
-	$employee = array('Eman','Hala','Heba');
+	
+	// لازم يكونوا في الداتا بيز 
+	$employee = "Eman";
+	$password ="12345";
+    session_start();
+
 	if(isset($_POST['sub'])){
 		if($_SERVER['REQUEST_METHOD']=='POST'){
-			if(in_array($_POST['name'], $employee)){
 
-				$_SESSION['user']=$_POST['name'];
-				echo  "<h2>Welcome ".$_POST['name']." We Will transfer to your page</h2>";
-				header("refresh:1;URL=profile_employee.php");
+			if($_POST['name']== $employee and $password== $_POST['pass']){
+					if(isset($_POST['remmeber'])){
+					  setcookie('username',$employee,time()+3600,"/");
+					  setcookie('password',$password,time()+3600,"/");
+						  if(isset($_COOKIE['username']) and isset($_COOKIE['password'])){
+						  	$username =$_COOKIE['username'];
+						  	$pass =$_COOKIE['password'];
+						  	echo "<script>
+						  		document.getElementById('pass').value=$pass;
+						  		
+						  	</script>";
+						  }					    
+					}
+				$_SESSION['username']=$_POST['name'];
+			    echo  "<h2>Welcome ".$_POST['name']." We Will transfer to your page</h2>";
+			    header("refresh:1;URL=profile_employee.php");			    
+				
 
 			}
 			else{
 				echo "<div>";
-					echo "<h2>You can\'t to login</h2>";
+					echo "<h2>You can't to login</h2>";
 				echo "</div>";
 			}
 			
