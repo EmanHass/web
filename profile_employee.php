@@ -30,7 +30,7 @@
 				<form method="post">
 					<div class="col1">	
 						<label>Employee username</label><br>
-						<input class="username" disabled type="text" name="username"><br> 
+						<input class="username" disabled type="text" name="username" value="<?php echo $_SESSION['username'];?>"><br> 
 						<div class="fullnamee">
 							<div>
 								<label>First name</label><br>
